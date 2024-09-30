@@ -1,0 +1,23 @@
+***How to install and run instruction(Windows, IDE PyCharm)***
+
+Pré-requisitos:
+- Python 3.11
+- PyCharm (foi o utilizado neste caso, pode ser qualquer outro IDE)
+- pgAdmin
+
+1 - Extrair o zip para a diretoria desejada
+2 - Abrir um terminal na pasta do projeto
+3 - Se necessário, chegar à diretoria com "cd SGD_Project"
+4 - Criar um ambiente virtual com: python3.11 -m venv django_env
+5 - Ativar o ambiente virtual com: django_env\Scripts\activate
+6 - Instalar as bibliotecas necessárias com:
+    pip install flask
+    pip install psycopg2-binary
+    pip install python-dotenv
+    pip install pandas
+7 - Executar o script para carregar os dados dos ficheiros .csv com: python3.11 load_data.py
+8 - Abrir o pgAdmin e executar as queries localizadas nos ficheiros "Insert_produtocompra.txt" e "Insert_produtocarrinho.txt" na pasta Queries
+9 - Alterar o ficheiro .env com as configurações específicas da database
+10 - Executar a API com: python3.11 api.py
+11 - No Postman, importar a coleção "SGD_Project.postman_collection" que está na pasta Postman (no nosso caso foi necessário instalar "Postman Agent")
+12 - Testar os diversos endpoints disponíveis na coleção
